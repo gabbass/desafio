@@ -1,0 +1,132 @@
+<html>
+<head>
+ <meta charset="utf-8">
+<script language=javascript type="text/javascript">
+			function validacao() {
+				var nome = formulario.nome.value;
+				var email = formulario.email.value;
+				var data = formulario.data.value;
+				var arquivo = formulario.racf.value;
+				var senha = formulario.senha.value;
+				var csenha = formulario.csenha.value;
+						//Tratativa
+							//Nome
+							if (nome == "") {
+							alert('Preencha o campo com seu nome');
+							formulario.nome.focus();
+							return false;
+							}
+							//racf
+							if (racf == "") {
+							alert('Preencha uma racf');
+							formulario.racf.focus();
+							return false;
+							}
+							//Email	
+							if (email == "") {
+							alert('Preencha um e-mail');
+							formulario.email.focus();
+							return false;
+							}
+							
+							//data							
+							if (data == "") {
+							alert('Preencha a data do seu nascimento!');
+							formulario.data.focus();
+							return false;
+							}
+								
+																
+							//Senha
+							if (senha == "") {
+							alert('Preencha uma senha');
+							formulario.senha.focus();
+							return false;
+							}
+							
+							if (csenha == "") {
+							alert('Digite novamente sua senha!');
+							formulario.csenha.focus();
+							return false;
+							}
+							
+							if (senha != csenha) {
+							alert('Senhas diferentes, repita novamente.');
+							formulario.senha.focus();
+							return false;
+							}
+							else{
+							return true;
+							}
+							
+							}
+			</script>
+ <style type="text/css">
+ table {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #FFF;
+	background-color: #096;
+	position: relative;
+	top: 50%;
+	right: auto;
+	width: 80%;
+	height: 20%;
+	left: 10%;
+}
+ body {
+	background-color: #0C0;
+}
+ </style>
+</head>
+				
+		<body>
+		<form name="formulario" action ="submit.php" method="POST" onSubmit="return validacao()">
+		<table border="0" width="100%">
+			<tr>
+			<td colspan="4"><h1><center>Cadastro de Usuário</center><h1></td>
+			</tr>
+			
+			<tr>
+			<td>Nome completo</td>
+			<td><input type="text" id="nome" name="Nome"></td>
+			
+			<td>Data de nascimento</td>
+			<td><input type="date" id="data" name="data"></td>
+			
+			<tr>
+			<td>E-mail</td>
+			<td><input type="text" id="email" name="email"></td>
+			
+			<td>racf</td>
+			<td><input type="text" id="racaf "name="racf"></td>
+			</tr>
+			
+			<tr>
+			<td>Senha</td>
+			<td><input type="password" id="senha" name="senha"></td>
+		
+			<td>Confirmação de Senha</td>
+			<td><input type="password" id="csenha" name="csenha"></td>
+			</tr>
+			
+			<tr>
+			<td></td>
+			<td><input type="button" name="limpar" value="Limpar"></td>
+		
+			<td><input type="submit" name="enviar" value="Enviar"></td>
+			<td></td>
+			</tr>
+			
+			
+		</table>
+		
+		
+		
+		
+		</form>
+        
+        <p> <a href='login.php'>Voltar</a>
+		
+		</body>
+	
+</html>
